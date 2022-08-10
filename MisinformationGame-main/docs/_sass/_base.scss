@@ -1,0 +1,201 @@
+/*
+  Reset some basic elements
+*/
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Basic styling
+*/
+
+html {
+  position: relative;
+  min-height: 100vh;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+h2 {
+  margin-bottom: 0.4rem;
+  margin-top: 2rem;
+  font-size: 1.75rem;
+}
+h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
+h3 {
+  margin-top: 1.75rem;
+  font-size: 1.25rem;
+}
+h4 {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  text-decoration: underline;
+}
+h5, h6 {
+  margin-top: 1.25rem;
+  margin-bottom: -0.75rem;
+  font-size: 1.05rem;
+}
+
+/* Body */
+body {
+  font-family: $base-font-family;
+}
+body img {
+  margin: 0.4rem auto auto auto;
+  display: block;
+  max-height: 360px;
+  max-width: 800px;
+  height: auto;
+}
+body img.inline-img {
+  display: inline;
+  width: auto;
+  margin-left: 0.06em;
+  margin-right: 0.06em;
+  vertical-align: -10%;
+}
+.content-wrapper img {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.content-wrapper img.inline-img {
+  box-shadow: none;
+}
+
+/* The 'How To Play' page requires custom styling of its images. */
+.content-wrapper img.h2p-img {
+  border: 1px solid rgb(156, 163, 175);
+  border-radius: 0.375rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+figure img {
+  max-width: 100%;
+}
+figure figcaption {
+  text-align: center;
+  font-style: italic;
+  color: #444444;
+  margin-top: 0.6em;
+}
+.content-wrapper figure > figcaption > a,
+figure > figcaption > a {
+  color: #444444;
+  text-decoration: none;
+}
+.content-wrapper figure > figcaption > a:hover,
+figure > figcaption > a:hover {
+  color: #222222;
+  text-decoration: underline;
+}
+
+p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  line-height: 1.65;
+  font-family: $body-font-family;
+}
+p.spacer {
+  padding: 0.2em;
+}
+
+/* Lists */
+ul, ol, dl {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+  font-family: $body-font-family;
+}
+
+ol li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-bottom: .5rem;
+}
+
+/*
+  Links
+*/
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+}
+
+/* Offsets heading and figure links so that they aren't hidden below the header. */
+h1::before, h2::before, h3::before,
+h4::before, h5::before, h6::before,
+figure::before {
+  content: '';
+  display: block;
+  height: $heading-link-offset;
+  margin-top: -$heading-link-offset;
+  visibility: hidden;
+}
+
+/*
+  Blockquote
+*/
+
+blockquote {
+  margin: 10px 20px 10px;
+  padding: 0px 15px;
+  border-left: 0.25em solid #ccc;
+  color: #999;
+  line-height: 1.5;
+}
+
+/**
+ * Tables
+ */
+table {
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}

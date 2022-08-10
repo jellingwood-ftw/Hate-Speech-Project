@@ -1,0 +1,18 @@
+
+title: Misinformation Game Docs
+description: The Misinformation Game is a social media simulator that was created to research the processing of misinformation.
+author: Paddy Lamont, Dean Law Yim Wan, Lucy Butler, Ullrich Ecker
+
+markdown: kramdown
+highlighter: rouge
+permalink: /:title
+plugins: [jekyll-sitemap, jekyll-seo-tag]
+
+sass:
+  sass_dir: _sass
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /screenshots/example-game.png
